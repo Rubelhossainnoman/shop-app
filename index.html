@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+
+    <title>Product Shop App</title>
+    <link rel="stylesheet" href="./assets/style.css">
+  </head>
+  <body>
+    <!-- Start Now here my dream shop app -->
+
+    <div class="shop_app my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-9 mx-auto">
+                    <div class="start_shop_app">
+                        <div class="card shadow">
+                            <div class="card-header">
+                                <hr>
+                                <h3  style="color:#0d6efd;" class="text-center"> My Product Shop App</h3>
+                                <hr>
+                            </div>
+                            <div class="card-body">
+                                <table class="table" table-striped>
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">#</th>
+                                      <th scope="col">Product Image</th>
+                                      <th scope="col">Product Name</th>
+                                      <th scope="col">Product Price</th>
+                                      <th scope="col">Product Quantity</th>
+                                      <th scope="col">Total Amount</th>
+                                      <th scope="col">Product Action</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody id="product_list"></tbody>
+                                </table>
+                            </div>
+                            <div class="card-footer">
+                              <div class="add_new_product">
+                                <a href="#shop_modal" data-bs-toggle="modal" class="btn btn-primary">Add New Products</a>
+                              </div>
+                              <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal here -->
+
+    <!-- Add new products modal -->
+
+    <div class="modal fade" id="shop_modal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content shadow">
+          <div class="modal-header d-flex justify-content-between">
+            <h3 style="color:#0d6efd;">Add New Products here...</h3>
+            <button data-bs-dismiss="modal" class="btn-close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="product_add_new_form">
+              <div id="msg"></div>
+              <form id="products_addnew_form">
+                <div class="my-3">
+                  <label for="">Product Name</label>
+                  <input name="name" class="form-control" type="text">
+                </div>
+                <div class="my-3">
+                  <label for="">Product Price</label>
+                  <input name="price" class="form-control" type="text">
+                </div>
+                <div class="my-3">
+                  <label for="">Product Quantity</label>
+                  <input name="quantity" class="form-control" type="text">
+                </div>
+                <div class="my-3">
+                  <label for="">Product Photo</label>
+                  <input name="photo" class="form-control" type="text">
+                </div>
+                <div class="my-3">
+                  <input class="btn btn-primary d-block m-auto w-100" type="submit" value="Add new product">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Prodcuts single view modal -->
+
+    <div class="modal fade" id="product_single_view">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Products single view</h3>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body d-flex flex-wrap flex-column align-items-center" id="single_view_products">
+            
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Prodcut edit modal -->
+
+
+    <div class="modal fade" id="product_edit_modal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content shadow">
+          <div class="modal-header d-flex justify-content-between">
+            <h3 style="color:#0d6efd;">Add New Products here...</h3>
+            <button data-bs-dismiss="modal" class="btn-close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="product_edit_form">
+              <div id="up_msg"></div>
+              <form action="" id="products_update_form">
+                
+              </form>
+              <!-- <form action="" id="products_addnew_form">
+                <div class="my-3">
+                  <label for="">Product Name</label>
+                  <input name="name" class="form-control" type="text">
+                </div>
+                <div class="my-3">
+                  <label for="">Product Price</label>
+                  <input name="price" class="form-control" type="text">
+                </div>
+                <div class="my-3">
+                  <label for="">Product Quantity</label>
+                  <input name="quantity" class="form-control" type="text">
+                </div>
+                <div class="my-3">
+                  <label for="">Product Old Photo</label>
+                  <div class="product_image">
+                  <img src="https://www.bazarmama.xyz/wp-content/uploads/2021/05/1EA89EBA.png" alt="">
+                  </div>
+                  <label for="">Replace New Product Photo</label>
+                  <input name="photo" class="form-control" type="text">
+                </div>
+                <div class="my-3">
+                  <input class="btn btn-primary d-block m-auto w-100" type="submit" value="Add new product">
+                </div>
+              </form> -->
+            </div>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- Popper.js first, then Bootstrap JS -->
+    <script src="./assets/bootstrap/bootstrap.min.js"></script>
+    <script src="./assets/js/function.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
